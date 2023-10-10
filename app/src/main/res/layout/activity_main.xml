@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/calcName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BMI Calculator"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <TextView
+        android:id="@+id/explanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Body Mass Index (BMI) is an easy way to \ncategorize a person's weight as underweight, \nhealthy, overweight, and/or obese. "
+        android:textAlignment="center"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="@+id/calcName"
+        app:layout_constraintStart_toStartOf="@+id/calcName"
+        app:layout_constraintTop_toBottomOf="@+id/calcName" />
+
+    <TextView
+        android:id="@+id/inputExplain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Enter weight in pounds (lbs) \nand height in inches (in): "
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/explanation"
+        app:layout_constraintTop_toBottomOf="@+id/explanation" />
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/black"
+        android:ems="10"
+        android:hint=" Weight (lbs)"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/inputExplain"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/inputExplain"
+        app:layout_constraintTop_toBottomOf="@+id/inputExplain" />
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/black"
+        android:ems="10"
+        android:hint=" Height (in)"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/weight"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/weight"
+        app:layout_constraintTop_toBottomOf="@+id/weight" />
+
+    <ImageView
+        android:id="@+id/bmiScale"
+        android:layout_width="345dp"
+        android:layout_height="234dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/preOut"
+        app:layout_constraintTop_toBottomOf="@+id/preOut"
+        app:srcCompat="@drawable/bmiscale" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="CALCULATE"
+        app:layout_constraintStart_toStartOf="@+id/height"
+        app:layout_constraintTop_toBottomOf="@+id/height" />
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="12dp"
+        android:text="0.0"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="@+id/calculate"
+        app:layout_constraintTop_toBottomOf="@+id/calculate" />
+
+    <TextView
+        android:id="@+id/preOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Your BMI is: "
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="@+id/calculate"
+        app:layout_constraintTop_toBottomOf="@+id/calculate" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
